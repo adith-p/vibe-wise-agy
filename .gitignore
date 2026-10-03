@@ -1,0 +1,15 @@
+# Local learning notes (per-project, never commit)
+.vibe-wise/
+.sensible-vibes/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.coverage
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store

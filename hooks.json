@@ -1,0 +1,11 @@
+{
+  "vibe-wise-restore": {
+    "PreInvocation": [
+      {
+        "type": "command",
+        "command": "python3 ./scripts/session_restore.py",
+        "timeout": 5
+      }
+    ]
+  }
+}

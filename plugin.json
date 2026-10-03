@@ -1,0 +1,5 @@
+{
+  "$schema": "https://antigravity.google/schemas/v1/plugin.json",
+  "name": "vibe-wise-agy",
+  "description": "You build. AI writes. Learning-first development for Antigravity CLI (agy port of vibe-wise)."
+}
