@@ -14,27 +14,60 @@ restarts onboarding.
 
 * `agy` 1.2.16+
 * Python 3.8+ (standard library only)
+* Git, if you install by cloning the repository
 
 ## Install
 
+The easiest way to install the plugin is to clone it and install it with `agy`:
+
 ```sh
-git clone git@github.com:adith-p/vibe-wise-agy.git
+git clone https://github.com/adith-p/vibe-wise-agy.git
 agy plugin install ./vibe-wise-agy
+```
+
+> **Already have a copy of this repository?** Run `agy plugin install .` from
+> the repository directory instead.
+
+### Check that it installed
+
+List your installed plugins:
+
+```sh
 agy plugin list
 ```
 
-To update: pull and re-run `agy plugin install`.
+Then open the `agy` TUI and confirm that:
 
-Workspace-local install (scoped to one project):
+* `/hooks` lists `vibe-wise-restore`
+* `/vibe-wise-learn-agy` starts onboarding
+* `/reset` shows a Cancel / Reset confirmation
+
+### Update the plugin
+
+If you installed by cloning the repository, pull the latest changes and run the
+installer again:
+
+```sh
+cd vibe-wise-agy
+git pull
+dy plugin install .
+```
+
+If the plugin is already installed from another location, run
+`agy plugin install <path-to-vibe-wise-agy>` again after updating that copy.
+
+### Install for one workspace only
+
+To keep the plugin scoped to a single project, copy it into that project's
+`.agents/plugins` directory:
 
 ```sh
 mkdir -p .agents/plugins
-cp -r vibe-wise-agy .agents/plugins/vibe-wise-agy
+cp -r /path/to/vibe-wise-agy .agents/plugins/vibe-wise-agy
 ```
 
-Verify in the `agy` TUI: `/hooks` lists `vibe-wise-restore`,
-`/vibe-wise-learn-agy` starts onboarding, `/reset` shows a Cancel / Reset
-confirmation.
+Run the command from your project directory, replacing `/path/to/vibe-wise-agy`
+with the location where you cloned the repository.
 
 ## Usage
 
